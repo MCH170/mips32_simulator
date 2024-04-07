@@ -1,0 +1,35 @@
+.data
+.text
+	#data and text fields are not used
+	#this is only a sample and is not meant to be run
+	#empty lines are ignored
+main:
+
+	ori $v0, $zero, 0x1
+	add $v0, $t1, $t2
+	addi $v0, $t1, 2
+	addiu $v0, $t1, 3
+	addu $v0, $t1, $t2
+	and $v0, $t1, $t2
+	andi $v0, $t1, 0xDE	#0xHEX
+	beq $v0, $t1, end
+	bne $v0, $t1, test
+	j test
+	jal end
+test:	
+	jr
+	lui $v0, 0xBEEF
+	lw $v0, -1($gp)
+	nor $v0, $t1, $t2
+	or $v0, $t1, $t2
+	slt $v0, $t1, $t2
+	slti $v0, $t1, 100
+	slti $v0, $t1, 0xABBA
+	sltu $v0, $t1, $t2
+	sll $v0, $t1, 2
+	srl $v0, $t1, 1
+	sw $v0, 4($gp)
+	sub $v0, $t1, $t2
+	subu $v0, $t1, $t2
+end:	
+	sll $zero, $zero, 0			#THIS IS MANDATORY
