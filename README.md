@@ -9,7 +9,7 @@ For commands see sample file.
 
 It reads the commnd file and generates a new instr.txt file without tabs, spaces, comments and labels.
 
-The end command is sll $0, $0, $0 and is mandatory.
+The end command is "sll $0, $0, $0" and is mandatory.
 
 .
 
